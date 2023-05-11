@@ -1,0 +1,189 @@
+﻿
+1. Każda instrukcja musi się kończyć średnikiem;
+1a. Pierwsza np. litera ma numer 0, nie 1;
+2. Zintegrowane Środowisko Planistyczne - czyli IDELIJ IDEA - może byc tez Visual Studio Code
+3. Wartość, czyli System.out
+4. Wewnątrz nawiasów println(podajemy tu wartość, którą chcemy wypisać)
+5. Tekst w cudzysłowiu
+6. SKRÓTY
+- psvm = public static void main - to jest METODA GŁÓWNA;
+- sout = system out println() = Prints a string to System.out
+
+7. Konwencja nazewnictwa:
+
+a) nazwa klasy Wielką Literą
+b) w nazwach klas nie ma spacji, ale jeśli dwa słowa to piszemy łącznie - każde wielką literą;
+
+Klasy - to jakby pliki/projekty
+Klasa to jakby kontener na nasz kod. Zaczyna się i kończy {}
+W klasie są zagnieżdżone metody, które mają zawartość wewnątrz klamry {}
+
+8. JAVA nie zwraca uwagi na białe znaki - kod może być bez spacji.
+
+9. Komentarze to dodatkowe informacje w kodzie, które nie mają wpływu na jego wykonanie.  // komentarz
+b) można wykomentować część kodu, którego nie chcemy teraz używać;
+c) gdy chcę wykomentować wiele linijek robię to /* oraz */
+
+10. Repozytorium GIT
+Będziemy wersjonować wszystkie pliki;
+
+a) Zakładamy konto i repozytorium na Githubie - kopiujemy do niego link i wklejamy w otwartym oknie GITa (w dowolnym folderze - "Git bash here" z komendą "S git clone (wklej link)".
+Dzięki temu tworzy się plik (np. notatnik) - taki sam, jak ten w repozytorium.
+- komenda "clear" czyści konsolę
+b) - aktualizacja pliku, który był zmieniony w GIT Hubie 
+"cd" = nawiguj/przenieś mnie do folderu...
+- cd "nazwa folderu"
+- git pull =czyli pobierz najnowsze zmiany z danego brancha, na którym się aktualnie znajdujemy
+
+c) Natomiast, aby pobrać zmiany z notatnika na git huba to komenda
+"git add (nazwa pliku do aktualizacji) README.md (lub . jeśli wszystkie pliki z danej lokalizacji ma przekopiować;
+
+Ale aby dodanie się udało, to trzeba je zatwierdzić (zacommitować) z wiadomością dla innych osób, co tu zmieniliśmy: 
+"git commit -m "Zmiana w Tech Skills"
+
+- prosi o podanie maila i nazwy użytk. - kopiujemy komendy i uzupełniamy nimi; taka autoryzacja
+- na nowo commitujemy
+- na nowo pushujemy "git push -u origin main"
+- okno logowania do GIT Huba 
+- MAMY! zmiany z notatnika wskoczyły na GIT HUBa!
+
+d) w GICIE nie działa ctrl+v lub c - trzeba prawą myszą i wybrać komendę;
+
+e) polecenia:
+- git branch nazwa - tworzy gałąź o danej nazwie
+- git branch - wyświetla wszystkie branche
+
+zielony kolor i gwiazdka oznacza, na której gałęzi jesteśmy
+- git checkout (nazwa gałęzi)
+- git status pokazuje w jakich plikach zostały dokonane zmiany i jakie pliki należy dodać do kolejki, by wgrać je do repozytorium;
+- git push -u origin Teksas (nazwa gałęzi) - aby wgrać plik na konkretną gałąź
+- git fetch odświeża całe repozytorium (w git hubie chyba, nie w konsoli) i pobiera, to co ktoś stworzył na swoim komputerze, ale jeszcze u mnie nie jest widoczne;
+
+f) często tworzy się kod lub jakąś treść w oddzielnej gałęzi, aby potem - po zatwierdzeniu jej - połączyć ją z główną (main). 
+- Open pull request
+- merge 
+
+----
+W folderze JAVA (tworzymy) otwieramy Command Line, czyli jakąś linię poleceń lub GIT Bash Here.
+
+b) Dodajemy folder .idea do ignorowanych, aby GIT nie zapisywał ich wersji, bo każdy użytkownik będzie miał wersję oddzielną dla siebie.
+
+10. Typy danych w JAVIE
+
+	1. Typy proste/prymitywne/podstawowe (mała litera) - zawierają jedynie surowe dane np. char, boolean, byte, short, int, long, float oraz double;
+
+    -     Typy proste zawsze mają jakąś wartość - nie mogą przyjmować null.
+    - Nazwa typu zaczyna się od małej litery.
+    - Takie typy nie posiadają metod bo nie są obiektami.
+    - Takie typy nie posiadają pól (właściwości).
+    - Plusem jest tutaj prostota oraz wydajność, wynikające z tego, że wartość jest przechowywana bezpośrednio w zmiennej.
+    - Zastosowanie. Typy proste są wykorzystywane przy operacjach matematycznych (takich jak dodawanie, mnożenie wartości...), ale mogą być także wykorzystywane do definiowania dowolnych parametrów liczbowych w programach, na przykład danych statystycznych.  
+
+a) Typ char reprezentuje pojedynczy znak (np. literę). Zmienne typu char mają wartości odpowiadające dowolnemu znakowi kodowania UTF-16.
+
+char itemFirstCharacter = 'i'; musi być pojedynczy cudzysłów, bo jeśli będzie podwójny to jest to już string - typ obiektowy;
+
+b) Typ boolean (buli.an) reprezentuje wartość typu logicznego. Zmienna typu boolean może przyjmować jedną z dwóch wartości: true albo false. Możemy na przykład ustawić w kodzie czy jakieś ustawienie jest włączone lub wyłączone:
+
+boolean enabled = true; 
+
+c) Następnie wyróżniamy grupę typów, reprezentujących zmienne numeryczne. Typy: byte, short, int i long to typy całkowitoliczbowe, to znaczy typy reprezentujące liczby całkowite. Różnica między zmiennymi wynika z zakresu, jaki reprezentują.
+
+-    Zmienna typu byte może przyjmować wartości z zakresu od -128 do 127, na przykład:
+
+    byte itemsNumber = 7; 
+
+-    Zmienna typu short z zakresu od -32768 do 32767:
+
+    short itemsNumber = 400; 
+
+-    Zmienna typu int (intidżer) z zakresu od -2147483648 do 2147483647:
+
+    int itemsNumber = 53000; 
+
+
+-    Zmienna typu long z zakresu od - 9223372036854775808 do 9223372036854775807, wymaga zapisu przy pomocy tzw. literału - czyli za liczbą podajemy literkę l:
+
+    long  itemsNumber = 72036854775807l; 
+
+-b) float oraz double. Używamy ich w przypadku liczb zmiennoprzecinkowych.
+
+-     Zmienna typu float wymaga zapisu przy pomocy tzw. literału     czyli za liczbą podajemy literkę f:
+
+    float  itemFloat = 4.33f;
+
+-     Zmienna typu double:
+
+    double  itemDouble = 404.56;
+
+-----------------------------------
+
+Liczby zmiennoprzecinkowe (zmiennopozycyjne) W porównaniu z liczbami stałoprzecinkowymi liczby zmiennoprzecinkowe umożliwiają obsługę większego zakresu liczb (bardzo małych lub bardzo dużych), jednak kosztem wolniejszego przetwarzania i mniejszej dokładności.
+
+
+
+	2. Typy obiektowe/referencyjne (wielka litera) - 
+
+
+   -  Nazwa typu zaczyna się od dużej litery (np. String zamiast string).
+   -  Takie typy są obiektami - mamy więc do dyspozycji różne metody np. length() - pytanie o długość wartości (np. słowa) oraz właściwości (pola).
+   -  Możemy do takich typów przypisywać wartości null 
+   -  Możemy w klasie tworzyć metody, właściwości oraz dodawać pola. Czyli pozwalają manipulować danymi, a nie tylko je przechowują. Zdecydowana większość programów napisanych w Java oparta jest właśnie na klasach.
+   -  null jest domyślną wartością dla typów obiektowych. 
+
+// Liczby stałoprzecinkowe
+- byte first numer = 127 //1 bajt -128 do 127
+- short second number = 32689; //2bajty - -32768 do 32767
+- Integer thirdNumber = 32768999; // 4 bajty - 2 147 483 648 do 2 147 483 647
+- Long fourthNumber = 2148000L;  // 8 bajtów -2^63 do (2^63)-1
+
+// Liczby zmiennoprzecinkowe
+Float fifthnumber = 4.99934F; // 4 bajty - max ok 6-7 liczb po przecinku
+Double sixNumber = 3.99999999999999D (okołoo)  //8 bajtów - max ok 15 cyfr po przecinku
+
+//wartość logiczna
+Boolean prawda = true
+Boolean fałsz = false
+
+// pojedynczy znak
+Character letter = 'A';
+
+//ciągi znaków
+String hello = "Hello Bartek";
+
+Komendy do obiektowych typów danych:
+System.out.println(hello.charAt(0)); - pokaż pierwszy znak zmiennej "hello"
+System.out.println(hello.ontains(Hello));
+
+	3. Kolekcje przechowują tylko typy obiektowe (proste nie)
+
+11. Zmienne to zarezerwowane miejsce w pamięci z określonym typem danych;
+W javie trzeba zadeklarować jaki typ danych będzie wpisany w zmienne; np. String
+
+	String name = "Ewa";
+
+	Zmienna o nazwie "name" i typie danych "String" , a wartość
+
+	- polecenie sout "System.out.println()
+
+	a) zmienne muszą mieć unikatowe nazwy;
+	b) możemy nadpisywać wartość dla zmiennej, czyli nadać jej nową. Nie piszety w całości np. string name = "Marcin", ale name = "Marcin" wystarczy;
+	c) jeśli wartości mają taki sam typ to można to zapisać w 1 linii, a wartości niżej np. int liczba, drugaliczba, result
+
+	liczba =1;
+	drugaLiczba =2;  itd...
+
+	d) jeśli zmienna ma 1 słowo to z małej, jesli dwa to np. firstNumber
+	
+12. Operatory matematyczne:
+
+    int addition = firstNumber + secondNumber;
+    int subtraction = firstNumber - secondNumber;
+    int multiplication = firstNumber * secondNumber;
+    int division = firstNumber/secondNumber;
+    int mod = secondNumber%firstNumber;
+	modulo - reszta z dzielenia (chyba)
+	
+13. Inkrementacja to zwiększenie wartości o 1, dekrementacja to zmniejszenie wartości o 1;
+- 2 typy: postinkrementacja / preinkrementacja
+a) postinkrementacja - jeśli a++ - dwa plusy po literze, to wtedy wartość rośnie o jeden;
