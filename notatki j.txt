@@ -36,14 +36,14 @@ b) - aktualizacja pliku, który był zmieniony w GIT Hubie
 - git pull =czyli pobierz najnowsze zmiany z danego brancha, na którym się aktualnie znajdujemy
 
 c) Natomiast, aby pobrać zmiany z notatnika na git huba to komenda
-"git add (nazwa pliku do aktualizacji) README.md (lub . jeśli wszystkie pliki z danej lokalizacji ma przekopiować;
+"git add (nazwa pliku do aktualizacji) README.md (mi to się nie udaje) - (lub . jeśli wszystkie pliki z danej lokalizacji ma przekopiować;
 
 Ale aby dodanie się udało, to trzeba je zatwierdzić (zacommitować) z wiadomością dla innych osób, co tu zmieniliśmy: 
 "git commit -m "Zmiana w Tech Skills"
 
 - prosi o podanie maila i nazwy użytk. - kopiujemy komendy i uzupełniamy nimi; taka autoryzacja
 - na nowo commitujemy
-- na nowo pushujemy "git push -u origin main"
+---> TUTAJ! na nowo pushujemy "git push -u origin main"
 - okno logowania do GIT Huba 
 - MAMY! zmiany z notatnika wskoczyły na GIT HUBa!
 
